@@ -32,7 +32,6 @@
 				--mainColor: #442563;
 				--secondaryColor: #9166ab;
 				--gray: #dcdcdcb5;
-				--borderColor: #b2b2b2b5;
 			}
 
 			* {
@@ -131,7 +130,7 @@
 			#hero h2 span {
 				background-color: #ffffff;
 				color: #000;
-				text-shadow: 3px 3px #9166ab;
+				text-shadow: 3px 3px var(--secondaryColor);
 			}
 
 			#hero p {
@@ -265,7 +264,7 @@
 
 			.tabs .nav-pills .nav-item .nav-link.active {
 				color: #fff;
-				background: #442563;
+				background: var(--mainColor);
 				border: 1px solid #b390d5;
 			}
 
@@ -350,14 +349,14 @@
 				content: "";
 				width: 50%;
 				height: 100%;
-				background: #442563;
+				background: var(--mainColor);
 				position: absolute;
 				top: 0;
 				left: 0;
 				border-radius: 10px 0px 0px 10px;
 			}
 			.overlay:hover:before {
-				background: #442563;
+				background: var(--mainColor);
 				width: 100%;
 				border-radius: 10px;
 			}
@@ -668,6 +667,24 @@
 				.footer {
 					display: none;
 				}
+			}
+
+			/*------ personal info -----*/
+
+			.personal-info {
+				background: #333;
+				font-size: 18px;
+				text-align: center;
+				color: #fff;
+				margin-left: -270px;
+				padding: 20px;
+			}
+
+			.personal-info a {
+				text-decoration: none;
+				font-weight: bolder;
+				cursor: pointer;
+				color: var(--secondaryColor);
 			}
 		</style>
 	</head>
@@ -1414,7 +1431,7 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/697/origina
 				</div>
 			</div>
 			<div class="personal-info">
-				This project was coded by
+				This webpage was coded by
 				<a
 					href="https://www.linkedin.com/in/cristianaa-santos/"
 					target="_blank"
