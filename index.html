@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Womankind Worldwide</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous"
+		/>
+		<!--Styling links-->
+		<script
+			src="https://kit.fontawesome.com/6c52dd0ea7.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+
+		<style>
+			:root {
+				--themeRed: #9a0f0f;
+				--mainColor: #442563;
+				--secondaryColor: #9166ab;
+				--gray: #dcdcdcb5;
+				--borderColor: #b2b2b2b5;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Roboto", sans-serif;
+			}
+
+			/*------ Header ------*/
+			.nav-bg {
+				background: rgba(255, 255, 255, 0.905);
+			}
+
+			.navbar-nav .nav-link {
+				color: var(--mainColor);
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			.navbar-nav .nav-link:hover {
+				color: var(--secondaryColor);
+			}
+
+			.navbar-toggler {
+				outline: none;
+			}
+
+			header .logo {
+				padding: 15px 0;
+				height: 75px;
+			}
+
+			header .logo img {
+				height: 100%;
+			}
+
+			/*------ Hero ------*/
+			#hero {
+				width: 100%;
+				height: 100vh;
+				overflow: hidden;
+				position: relative;
+			}
+
+			#hero:after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 0;
+				width: 130%;
+				height: 95%;
+				background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/778/original/bg.jpg?1673651431")
+					center top no-repeat;
+				z-index: 0;
+				border-radius: 0 0 50% 50%;
+				transform: translateX(-50%) rotate(0deg);
+			}
+
+			#hero:before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 0;
+				width: 130%;
+				height: 96%;
+				background: rgba(135, 98, 178, 0.3);
+				z-index: 0;
+				border-radius: 0 0 50% 50%;
+				transform: translateX(-50%) translateY(18px) rotate(2deg);
+			}
+
+			#hero .carousel-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+				bottom: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+
+			#hero h2 {
+				color: #fff;
+				margin-bottom: 30px;
+				font-size: 78px;
+				font-weight: bold;
+				text-shadow: 4px 4px #000;
+			}
+
+			#hero h2 span {
+				background-color: #ffffff;
+				color: #000;
+				text-shadow: 3px 3px #9166ab;
+			}
+
+			#hero p {
+				font-size: 25px;
+				font-weight: 600;
+				width: 80%;
+				animation-delay: 0.4s;
+				margin: 0 auto 30px auto;
+				color: #000;
+			}
+
+			#hero .carousel-control-prev,
+			#hero .carousel-control-next {
+				width: 10%;
+				text-decoration: none;
+			}
+
+			#hero .carousel-control-next-icon,
+			#hero .carousel-control-prev-icon {
+				background: none;
+				font-size: 48px;
+				line-height: 1;
+				width: auto;
+				height: auto;
+			}
+
+			#hero .hero-btn {
+				background: #200c34;
+				font-weight: bold;
+				font-size: 16px;
+				letter-spacing: 1px;
+				display: inline-block;
+				padding: 12px 32px;
+				border-radius: 50px;
+				transition: 0.5s;
+				line-height: 1;
+				margin: 10px;
+				color: #fff;
+				animation-delay: 0.5s;
+				border: 2px solid var(--secondaryColor);
+			}
+
+			#hero .hero-btn:hover {
+				background: var(--secondaryColor);
+				color: #fff;
+			}
+
+			@media (min-width: 1024px) {
+				#hero p {
+					width: 60%;
+				}
+				#hero .carousel-control-prev,
+				#hero .carousel-control-next {
+					width: 5%;
+				}
+			}
+			@media (max-width: 768px) {
+				#hero h2 {
+					font-size: 28px;
+				}
+
+				#hero p {
+					font-size: 20px;
+				}
+
+				#hero:after {
+					width: 180%;
+					height: 95%;
+					border-radius: 0 0 50% 50%;
+					transform: translateX(-50%) rotate(0deg);
+				}
+				#hero:before {
+					top: 0;
+					width: 180%;
+					height: 94%;
+					border-radius: 0 0 50% 50%;
+					transform: translateX(-50%) translateY(20px) rotate(4deg);
+				}
+			}
+			@media (max-width: 575px) {
+				#hero:after {
+					left: 40%;
+					top: 0;
+					width: 200%;
+					height: 95%;
+					border-radius: 0 0 50% 50%;
+					transform: translateX(-50%) rotate(0deg);
+				}
+				#hero:before {
+					left: 50%;
+					top: 0;
+					width: 200%;
+					height: 94%;
+					border-radius: 0 0 50% 50%;
+					transform: translateX(-50%) translateY(20px) rotate(4deg);
+				}
+			}
+
+			/*------ About us section ------*/
+			.heading-section span {
+				font-size: 28px;
+			}
+
+			.heading-section h2 {
+				font-size: 38px;
+				font-weight: bold;
+			}
+
+			.tabs .nav-pills .nav-item {
+				margin-bottom: 10px;
+			}
+
+			.tabs .nav-pills .nav-item .nav-link {
+				background: #fff;
+				border-radius: 4px;
+				color: #000;
+				font-weight: bold;
+				border: 1px solid var(--mainColor);
+				font-size: 24px;
+				line-height: 30px;
+			}
+
+			.tabs .nav-pills .nav-item .nav-link:hover {
+				background: var(--mainColor);
+				color: #fff;
+			}
+
+			.tabs .nav-pills .nav-item .nav-link span {
+				color: var(--mainColor);
+			}
+
+			.tabs .nav-pills .nav-item .nav-link.active {
+				color: #fff;
+				background: #442563;
+				border: 1px solid #b390d5;
+			}
+
+			.tabs .tab-content {
+				background: #fff;
+				padding: 0;
+			}
+
+			.tabs .tab-content .img {
+				width: 100%;
+				height: 400px;
+				margin-bottom: 20px;
+			}
+
+			.tabs .tab-content p {
+				font-size: 20px;
+				font-weight: 500;
+			}
+
+			@media (max-width: 575px) {
+				.tabs .tab-content .img {
+					display: none;
+				}
+				.tabs .tab-content p {
+					text-align: center;
+				}
+			}
+
+			/*--------Strategies Section--------*/
+
+			.strategies h3 {
+				margin-top: 200px;
+				margin-bottom: 15px;
+				font-size: 38px;
+				font-weight: bold;
+			}
+
+			.strategy-box {
+				padding: 15px;
+				background: var(--secondaryColor);
+				margin-bottom: 30px;
+				position: relative;
+			}
+			.strategy-icon {
+				width: 90px;
+				height: 90px;
+				text-align: center;
+				line-height: 90px;
+			}
+			.strategy-icon i {
+				font-size: 50px;
+				color: #fff;
+				mix-blend-mode: hard-light;
+			}
+
+			.strategy-box h2 {
+				background: #fff;
+				font-size: 26px;
+				font-weight: bold;
+				color: var(--mainColor);
+				mix-blend-mode: hard-light;
+			}
+
+			.strategy-box p {
+				margin-top: 20px;
+				font-size: 17px;
+				font-weight: light;
+				color: #fff;
+				mix-blend-mode: hard-light;
+			}
+
+			.overlay {
+				margin: 20px auto;
+				border: none;
+				padding: 10px 44px;
+				font-size: 20px;
+				position: relative;
+				display: inline-block;
+			}
+			.overlay:before {
+				transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+				content: "";
+				width: 50%;
+				height: 100%;
+				background: #442563;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 10px 0px 0px 10px;
+			}
+			.overlay:hover:before {
+				background: #442563;
+				width: 100%;
+				border-radius: 10px;
+			}
+
+			/*--------Team Section--------*/
+			.team {
+				margin-top: 250px;
+				background: #cfc7d6;
+				padding: 150px 0 200px 0;
+			}
+
+			.team .section-title h2 {
+				margin-bottom: 25px;
+				font-size: 38px;
+				font-weight: bold;
+			}
+
+			.team .team-1 {
+				text-align: center;
+				position: relative;
+			}
+
+			.team .team-1 .pic {
+				border-radius: 4px;
+				overflow: hidden;
+			}
+
+			.team .team-1 img {
+				transition: all ease-in-out 0.4s;
+			}
+
+			.team .team-1:hover img {
+				transform: scale(1.1);
+			}
+
+			.team .team-1 .team-info {
+				position: absolute;
+				bottom: -48px;
+				left: 20px;
+				right: 20px;
+				background: linear-gradient(
+					91.7deg,
+					rgb(50, 25, 79) -4.3%,
+					rgb(122, 101, 149) 101.8%
+				);
+				opacity: 0.9;
+				padding: 15px 0;
+				border-radius: 4px;
+			}
+
+			.team .team-1 h4 {
+				font-weight: bold;
+				margin-bottom: 10px;
+				font-size: 18px;
+				color: #fff;
+				position: relative;
+				padding-bottom: 10px;
+			}
+
+			.team .team-1 h4:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 50px;
+				height: 1px;
+				background: #b390d5;
+				bottom: 0;
+				left: calc(50% - 25px);
+			}
+
+			.team .team-1 span {
+				font-style: italic;
+				display: block;
+				font-size: 15px;
+				color: #fff;
+			}
+
+			.team .team-1 .social {
+				margin-top: 15px;
+			}
+
+			.team .team-1 .social a {
+				transition: color 0.3s;
+				color: #b390d5;
+				text-decoration: none;
+			}
+
+			.team .team-1 .social a:hover {
+				color: #fff;
+			}
+
+			.team .team-1 .social i {
+				font-size: 17px;
+				margin: 0 2px;
+			}
+
+			@media (max-width: 992px) {
+				.team .team-1 {
+					margin-bottom: 100px;
+				}
+			}
+
+			/*------ News section ------*/
+			.news-section {
+				margin-top: 200px;
+			}
+
+			.news-section h2 {
+				font-size: 38px;
+				font-weight: bold;
+			}
+
+			.news-item {
+				display: block;
+				position: relative;
+				overflow: hidden;
+				max-width: 530px;
+				margin: auto auto 16px;
+			}
+
+			.news-item .text {
+				display: flex;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(38, 41, 39, 0.2);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				z-index: 1;
+			}
+
+			.news-item .text .des {
+				color: #fff;
+				margin: auto 32px 32px;
+			}
+
+			.news-item .text .des h2 {
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+
+			.news-item .text .des p {
+				font-weight: light;
+				font-size: 20px;
+			}
+
+			@media (min-width: 992px) {
+				.news-item {
+					max-width: none;
+					margin: 0;
+				}
+				.news-item .text {
+					transition: clip-path 0.25s ease-out, background-color 0.7s;
+					clip-path: inset(0px);
+				}
+				.news-item .text .des {
+					transition: opacity 0.25s;
+					margin-left: 80px;
+					margin-right: 80px;
+					margin-bottom: 80px;
+				}
+				.news-item img {
+					transition: clip-path 0.25s ease-out;
+					clip-path: inset(-1px);
+				}
+				.news-item:hover img {
+					clip-path: inset(32px);
+				}
+				.news-item:hover .text {
+					background-color: rgba(111, 49, 140, 0.6);
+				}
+			}
+
+			/*------ Join us section ------*/
+
+			.join {
+				background-color: #cfc7d6;
+				color: #fff;
+				padding: 50px 50px;
+				margin-bottom: -150px;
+				margin-top: 150px;
+			}
+
+			.join .joinTitle {
+				color: #000;
+				font-size: 40px;
+				font-weight: 500;
+			}
+
+			.join .joinTitle span {
+				color: #000;
+				font-weight: 800;
+			}
+
+			.join p {
+				font-size: 20px;
+				font-weight: 500;
+				color: #000;
+				margin-top: 20px;
+			}
+
+			.join button {
+				padding: 12px 45px;
+				margin: 5px;
+				margin-top: 20px;
+				border: 0;
+				outline: none;
+				font-weight: 600;
+				font-size: 20px;
+				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
+				border-radius: 5px;
+			}
+
+			.join button.joinNow {
+				background-color: #000000;
+				color: #fff;
+				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
+			}
+
+			.join button a {
+				text-decoration: none;
+				color: #fff;
+			}
+
+			.join .joinNow:hover {
+				background-color: #333;
+				transition: ease-in-out 0.2s;
+			}
+
+			.join .donateNow:hover {
+				background-color: #333;
+				transition: ease-in-out 0.2s;
+				color: #fff;
+			}
+
+			/*------footer-----*/
+
+			.footer {
+				margin-top: 150px;
+				width: 100%;
+				padding: 50px 15%;
+				background: #333;
+				color: #efefef;
+				display: flex;
+			}
+
+			.footer div {
+				text-align: center;
+			}
+
+			.col-2 {
+				flex-grow: 2;
+			}
+
+			.footer div h3 {
+				font-size: 20px;
+				font-weight: 300;
+				margin-bottom: 30px;
+				letter-spacing: 1px;
+			}
+
+			.col-1 a {
+				font-size: 18px;
+				display: block;
+				text-decoration: none;
+				color: #efefef;
+				margin-bottom: 10px;
+			}
+
+			form input {
+				width: 400px;
+				height: 45px;
+				border-radius: 4px;
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 40px;
+				outline: none;
+				border: none;
+			}
+
+			form button {
+				background: transparent;
+				border: 2px solid #fff;
+				color: #fff;
+				border-radius: 30px;
+				padding: 10px 30px;
+				font-size: 15px;
+				cursor: pointer;
+			}
+
+			.social-icons {
+				margin-top: 30px;
+			}
+
+			.social-icons i {
+				font-size: 22px;
+				margin: 10px;
+				cursor: pointer;
+			}
+
+			.col-1 a:hover,
+			form button:hover,
+			.social-icons i:hover {
+				color: var(--secondaryColor);
+			}
+
+			@media (max-width: 767px) {
+				.footer {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav
+				class="navbar navbar-expand-lg navbar-light nav-bg fixed-top py-2"
+				id="mainNav"
+			>
+				<div class="container">
+					<div class="logo">
+						<img
+							src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/656/original/logo.png?1673614180"
+							alt="NGO logo"
+						/>
+					</div>
+					<button
+						class="navbar-toggler navbar-toggler-right"
+						type="button"
+						data-toggle="collapse"
+						data-target="#myNavbar"
+						aria-controls="myNavbar"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="navbar-links">
+						<div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="navbar-nav ml-auto my-2 my-lg-0">
+								<li class="nav-item">
+									<a class="nav-link" href="#">HOME</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#about-1"
+										>ABOUT</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#about-1"
+										>MISSION</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#joinSection"
+										>JOIN</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#joinSection"
+										>DONATE</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!--Hero Section-->
+		<section
+			id="hero"
+			class="d-flex justify-content-center align-items-center"
+		>
+			<div
+				id="heroCarousel"
+				class="container carousel carousel-fade"
+				data-ride="carousel"
+			>
+				<!--Slide-1-->
+				<div class="carousel-item active">
+					<div class="carousel-container">
+						<h2>
+							Powering women to
+							<span> change their own lives.</span>
+						</h2>
+						<p class="animate__animated animate__fadeInUp">
+							For over 30 years we have been supporting women’s
+							rights organisations and movements to strengthen and
+							grow. Together we will secure equal rights for women
+							and girls across the globe. And you can be part of
+							it.
+						</p>
+						<a
+							href="#"
+							class="btn hero-btn animate__animated animate__backInUp"
+						>
+							Read More
+						</a>
+					</div>
+				</div>
+
+				<!--Slide-2-->
+				<div class="carousel-item">
+					<div class="carousel-container">
+						<h2>
+							Powering women to
+							<span> change their own lives.</span>
+						</h2>
+						<p class="animate__animated animate__fadeInUp">
+							From greater economic hardship to increasing
+							violence and abuse in lockdown, women and girls are
+							bearing the brunt of the COVID-19 crisis. Find out
+							how we are supporting our partners to adapt their
+							work to protect the lives and livelihoods of women
+							and girls.
+						</p>
+						<a
+							href="#"
+							class="btn hero-btn animate__animated animate__backInUp"
+						>
+							Read More
+						</a>
+					</div>
+				</div>
+
+				<!--Slide-3-->
+				<div class="carousel-item">
+					<div class="carousel-container">
+						<h2>
+							Powering women to
+							<span> change their own lives.</span>
+						</h2>
+						<p class="animate__animated animate__fadeInUp">
+							A global backlash against women’s rights is on the
+							rise. The rights of women are enshrined in
+							international human rights law but the power
+							imbalances that drive inequality between women and
+							men remain in full force.
+						</p>
+						<a
+							href="#"
+							class="btn hero-btn animate__animated animate__backInUp"
+						>
+							Read More
+						</a>
+					</div>
+				</div>
+				<!------>
+				<a
+					class="carousel-control-prev"
+					href="#heroCarousel"
+					role="button"
+					data-slide="prev"
+				>
+					<span
+						class="carousel-control-prev-icon fas fa-chevron-left"
+						aria-hidden="true"
+					></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a
+					class="carousel-control-next"
+					href="#heroCarousel"
+					role="button"
+					data-slide="next"
+				>
+					<span
+						class="carousel-control-next-icon fas fa-chevron-right"
+						aria-hidden="true"
+					></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</section>
+
+		<!--About us-->
+		<section class="mt-5">
+			<div class="container">
+				<div class="row justify-content-center mb-5">
+					<div class="col-md-8 text-center heading-section">
+						<span>About Us</span>
+						<h2 class="mb-3">Our Mission | Vision & Plans</h2>
+					</div>
+				</div>
+				<!------>
+				<div class="row tabs mt-4">
+					<div class="col-md-4">
+						<ul
+							class="nav nav-pills nav-fill d-md-flex d-block flex-column"
+						>
+							<li class="nav-item text-left">
+								<a
+									class="nav-link active py-4"
+									data-toggle="tab"
+									href="#about-1"
+									>About us</a
+								>
+							</li>
+							<li class="nav-item text-left">
+								<a
+									class="nav-link py-4"
+									data-toggle="tab"
+									href="#about-2"
+									>How we work</a
+								>
+							</li>
+							<li class="nav-item text-left">
+								<a
+									class="nav-link py-4"
+									data-toggle="tab"
+									href="#about-3"
+									>Our Aims</a
+								>
+							</li>
+							<li class="nav-item text-left">
+								<a
+									class="nav-link py-4"
+									data-toggle="tab"
+									href="#about-4"
+									>Our Impact</a
+								>
+							</li>
+							<li class="nav-item text-left">
+								<a
+									class="nav-link py-4"
+									data-toggle="tab"
+									href="#about-5"
+									>Our Finances</a
+								>
+							</li>
+							<li class="nav-item text-left">
+								<a
+									class="nav-link py-4"
+									data-toggle="tab"
+									href="#about-6"
+									>Our Plan</a
+								>
+							</li>
+						</ul>
+					</div>
+					<!----->
+					<div class="col-md-8">
+						<div class="tab-content">
+							<div
+								class="tab-pane container p-0 active"
+								id="about-1"
+							>
+								<div
+									class="img"
+									style="
+										background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/672/original/ngo-img1.jpg?1673619123);
+									"
+								></div>
+								<p>
+									We are a global women's rights organisation.
+									We work with women's rights organisations
+									and movements to change the world for women
+									and girls. Our job is to support the women
+									who are powering other women around the
+									world. Because we know that when women come
+									together, they have the power to change
+									their own lives.
+								</p>
+							</div>
+							<!----->
+							<div class="tab-pane container p-0" id="about-2">
+								<div
+									class="img"
+									style="
+										background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/678/original/ngo-img2.jpg?1673622252);
+									"
+								></div>
+								<p>
+									We listen to women's needs to provide them
+									with support to achieve their aims. This
+									includes knowledge sharing, supporting
+									feminist research, funding opportunities,
+									amplifying messages through our
+									communications, and facilitating their
+									participation in key international events to
+									influence policymakers.
+								</p>
+							</div>
+							<!----->
+							<div class="tab-pane container p-0" id="about-3">
+								<div
+									class="img"
+									style="
+										background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/679/original/ngo-img3.jpg?1673622257);
+									"
+								></div>
+								<p>
+									We aim to end all forms of violence against
+									women and girls, advance women’s economic
+									rights and strengthen their influence and
+									decision-making power. We work with a
+									feminist approach and other values such as
+									inclusion and a commitment to learning.
+									Working collectively, we can propel
+									ourselves to a new world where women and
+									girls can live their best lives.
+								</p>
+							</div>
+							<!----->
+							<div class="tab-pane container p-0" id="about-4">
+								<div
+									class="img"
+									style="
+										background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/680/original/ngo-img4.jpg?1673622262);
+									"
+								></div>
+								<p>
+									Last year, 898,619 individuals were
+									indirectly supported through our work. We
+									funded 38 partners representing diverse
+									women’s rights organisations across five
+									countries Of these, we supported 23 partners
+									with £236,741 through new flexible funds –
+									the Her Voice Fund, the Movement
+									Strengthening Fund and Nepal COVID
+									Resilience Grants.
+								</p>
+							</div>
+							<!----->
+							<div class="tab-pane container p-0" id="about-5">
+								<div
+									class="img"
+									style="
+										background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/681/original/ngo-img5.jpg?1673622266);
+									"
+								></div>
+								<p>
+									We give money to local partner organisations
+									in our focus countries. Our partnership
+									agreements are based on high levels of
+									accountability and transparency. Through
+									shared responsibility and project programme
+									management, we support partners in their
+									work as well as their financial management
+									and reporting.
+								</p>
+							</div>
+							<!----->
+							<div class="tab-pane container p-0" id="about-6">
+								<div
+									class="img"
+									style="
+										background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/682/original/ngo-img6.jpg?1673622270);
+									"
+								></div>
+								<p>
+									So many women, girls, trans and intersex
+									people are still denied their rights and
+									freedoms, while recent progress made in
+									gender equality is under threat. The
+									patriarchal system continues to dominate
+									societies. Misogyny, racism and abuse
+									persist. But feminist movements and
+									courageous activists across the world are
+									rising up. Womankind stands with them.
+								</p>
+							</div>
+							<!----->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!---Strategies Section-->
+		<div class="mt-3">
+			<div class="strategies">
+				<div class="container">
+					<div class="section-title text-center">
+						<h3>Under these strategies we will:</h3>
+						<!----->
+						<div class="row">
+							<div class="col-md-4">
+								<div class="strategy-box overlay shadow">
+									<div class="strategy-icon">
+										<i class="fa-solid fa-hand-fist"></i>
+									</div>
+									<h2>Share power with partners</h2>
+									<p>
+										Our partners have a strong say in our
+										development and we work with them to
+										bring in funding, increasingly in the
+										form of flexible, participatory,
+										long-term grants.
+										<br />
+										By sharing power and creating
+										opportunities to exchange learning we
+										will all become stronger organisations.
+									</p>
+								</div>
+							</div>
+							<!----->
+							<div class="col-md-4">
+								<div class="strategy-box overlay shadow">
+									<div class="strategy-icon">
+										<i
+											class="fa-solid fa-handshake-simple"
+										></i>
+									</div>
+									<h2>Influence the agenda</h2>
+									<p>
+										Together, we are part of an influential
+										movement, breaking barriers in how
+										development and advocacy are done.
+										<br />The collective voices of feminist
+										organisations, movements and activists
+										are more powerful and influential in
+										demanding positive, irreversible change.
+									</p>
+								</div>
+							</div>
+							<!----->
+							<div class="col-md-4">
+								<div class="strategy-box overlay shadow">
+									<div class="strategy-icon">
+										<i
+											class="fa-solid fa-hand-holding-heart"
+										></i>
+									</div>
+									<h2>Decolonize our practice</h2>
+									<p>
+										Many of our leaders are part of national
+										and local movements in Eastern and
+										Southern Africa and South Asia.
+										Anti-racism is intrinsic to how we work.
+										We have deepened decolonisation work,
+										diversifying decision-making and
+										exploring new power relationships and
+										accountability.
+									</p>
+								</div>
+							</div>
+							<!----->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team Section-->
+			<section class="team">
+				<div class="container">
+					<div class="section-title">
+						<h2 class="text-center">Our Team</h2>
+					</div>
+					<div class="row">
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="team-1">
+								<div class="pic">
+									<img
+										src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/695/original/Caroline_Haworth_10-scaled-e1600171491290.jpg?1673634843"
+										class="img-fluid"
+										alt=""
+									/>
+								</div>
+								<div class="team-info">
+									<h4>Caroline Haworth</h4>
+									<span>Chief Executive</span>
+									<div class="social">
+										<a href="#">
+											<i class="fab fa-twitter"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-facebook"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-instagram"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-linkedin"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="team-1">
+								<div class="pic">
+									<img
+										src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/699/original/dinah-photo-square.jpg?1673634998"
+										class="img-fluid"
+										alt=""
+									/>
+								</div>
+								<div class="team-info">
+									<h4>Dinah Musindarwezo</h4>
+									<span
+										>Director of Policy &
+										Communications</span
+									>
+									<div class="social">
+										<a href="#">
+											<i class="fab fa-twitter"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-facebook"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-instagram"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-linkedin"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="team-1">
+								<div class="pic">
+									<img
+										src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/697/original/Disha-2-scaled-e1600171100275.jpeg?1673634900"
+										class="img-fluid"
+										alt=""
+									/>
+								</div>
+								<div class="team-info">
+									<h4>Disha Sughand</h4>
+									<span
+										>Director of Fundraising &
+										Marketing</span
+									>
+									<div class="social">
+										<a href="#">
+											<i class="fab fa-twitter"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-facebook"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-instagram"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-linkedin"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="team-1">
+								<div class="pic">
+									<img
+										src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/698/original/Piyumi-1-scaled-e1600171297339-600x600.jpeg?1673634931"
+										class="img-fluid"
+										alt=""
+									/>
+								</div>
+								<div class="team-info">
+									<h4>Piyumi Samaraweera</h4>
+									<span>Programme Manager</span>
+									<div class="social">
+										<a href="#">
+											<i class="fab fa-twitter"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-facebook"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-instagram"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-linkedin"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---->
+					</div>
+				</div>
+			</section>
+
+			<!--News Section-->
+			<section class="news-section">
+				<div class="container">
+					<div class="text-center">
+						<h2 class="mb-4">News</h2>
+					</div>
+					<div class="row no-gutters">
+						<div class="col-lg-6">
+							<a
+								class="news-item"
+								href="https://www.womankind.org.uk/afghan-women-call-on-the-international-community-where-are-you-now-in-our-hour-of-greatest-need/"
+								target="_blank"
+							>
+								<span class="text">
+									<span class="des">
+										<h2>12 December 2022</h2>
+										<p class="mb-0">
+											Afghan women call on the
+											international community: “Where are
+											you now in our hour of greatest
+											need?”
+										</p>
+									</span>
+								</span>
+								<img
+									src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/705/original/news-item1.jpg?1673636134"
+									class="img-fluid"
+									alt=""
+								/>
+							</a>
+						</div>
+						<!---->
+						<div class="col-lg-6">
+							<a
+								class="news-item"
+								href="https://www.womankind.org.uk/send-a-message-of-solidarity-to-the-trailblazing-women-running-for-election-in-nepal/"
+								target="_blank"
+							>
+								<span class="text">
+									<span class="des">
+										<h2>17 November 2022</h2>
+										<p class="mb-0">
+											Send a message of solidarity to the
+											trailblazing women running for
+											election in Nepal
+										</p>
+									</span>
+								</span>
+								<img
+									src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/706/original/news-item2.jpg?1673636139"
+									class="img-fluid"
+									alt=""
+								/>
+							</a>
+						</div>
+						<!---->
+						<div class="col-lg-6">
+							<a
+								class="news-item"
+								href="https://www.womankind.org.uk/no-one-of-us-can-be-free-until-everybody-is-free-womankinds-stance-on-trans-rights/"
+								target="_blank"
+							>
+								<span class="text">
+									<span class="des">
+										<h2>4 August 2022</h2>
+										<p class="mb-0">
+											‘No one of us can be free until
+											everybody is free’: Womankind’s
+											stance on trans rights
+										</p>
+									</span>
+								</span>
+								<img
+									src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/708/original/news-item4.jpg?1673636149"
+									class="img-fluid"
+									alt=""
+								/>
+							</a>
+						</div>
+						<div class="col-lg-6">
+							<a
+								class="news-item"
+								href="https://www.womankind.org.uk/deaf-women-included-an-intersectional-approach-to-disability/"
+								target="_blank"
+							>
+								<span class="text">
+									<span class="des">
+										<h2>25 August 2022</h2>
+										<p class="mb-0">
+											Deaf Women Included: an
+											intersectional approach to
+											disability
+										</p>
+									</span>
+								</span>
+								<img
+									src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/707/original/news-item3.jpg?1673636144"
+									class="img-fluid"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--Join us Section-->
+			<section class="join" id="joinSection">
+				<div class="container">
+					<div class="joinTitle">
+						STAND WITH US AS WE MAKE <span>EQUAL RIGHTS</span> A
+						REALITY.
+					</div>
+					<p>
+						You have the power to change the world. Whether you
+						choose to donate, back one of our campaigns or work with
+						us, you’ll support women to claim their rights. With
+						your help, we will change the world for women and girls.
+					</p>
+					<button class="joinNow">
+						<a
+							href="https://careers.womankind.org.uk/"
+							target="_blank"
+							>JOIN US</a
+						>
+					</button>
+					<button
+						class="donateNow"
+						onclick="alert('Thank you for making the difference!');"
+					>
+						DONATE
+					</button>
+				</div>
+			</section>
+
+			<!--Footer-->
+			<div class="footer">
+				<div class="col-1">
+					<h3>USEFUL LINKS</h3>
+					<a href="#">Home</a>
+					<a href="#">About</a>
+					<a href="#">Mission</a>
+					<a href="#">Take Action</a>
+				</div>
+				<div class="col-2">
+					<h3>NEWSLETTER</h3>
+					<form>
+						<input
+							type="email"
+							placeholder="Your Email Address"
+							required
+						/>
+						<br />
+						<button type="submit">SUBSCRIBE NOW</button>
+					</form>
+				</div>
+				<div class="col-3">
+					<h3>CONTACT</h3>
+					<p>
+						Wenlock Studios<br />
+						50-52 Wharf Road<br />
+						London
+					</p>
+					<p>info@womankind.org.uk</p>
+					<p>+44 (0) 203 567 5930</p>
+					<div class="social-icons">
+						<i class="fab fa-facebook"></i>
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-instagram"></i>
+					</div>
+				</div>
+			</div>
+
+			<script
+				src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+				crossorigin="anonymous"
+			></script>
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+				crossorigin="anonymous"
+			></script>
+			<script
+				src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+				integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+				crossorigin="anonymous"
+			></script>
+		</div>
+	</body>
+</html>
